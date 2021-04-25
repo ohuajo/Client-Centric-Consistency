@@ -1,0 +1,23 @@
+// My project proto file
+syntax = "proto3";
+
+service RPC {
+    rpc MsgDelivery (ExampleRequest) returns (ExampleReply) {}
+    rpc ClockUpdate (ExamplePropOut) returns (ExamplePropIn) {}
+}
+
+message ExampleRequest {
+    string inmessage = 1;
+}
+
+message ExampleReply {
+    string outmessage = 1;
+}
+
+message ExamplePropOut {
+    string propout = 1;
+}
+
+message ExamplePropIn {
+    string propin = 1;
+}
